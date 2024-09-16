@@ -1,0 +1,10 @@
+#!/bin/bash
+#script need package 'at' in your system.
+echo "Enter path to file:"
+read source_path
+echo "Enter destination path:"
+read dest_path
+echo "Indicate time:"
+read time
+
+echo "cp -rv $source_path $dest_path && echo 'Data transferred!' > /dev/pts/0" | at $time 
